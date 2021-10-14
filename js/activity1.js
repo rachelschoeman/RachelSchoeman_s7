@@ -38,7 +38,9 @@ var link = svg.selectAll(".link")
       .attr("class", "node")
       .attr("r", 5)
       .on("click" ,function(d, i){
-        node.selectAll("circles").style("stroke","none");
+        node.attr("stroke","none");
+        //.style("stroke","none");
+
         d3.select(this).attr("stroke","grey").attr("stroke-width", 2);
       })
       .style("fill", function(d){
